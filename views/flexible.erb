@@ -1,0 +1,18 @@
+<!-- /views/flexible.erb -->
+
+<% params %>
+
+<h1><%= @nod %>d<%= @sides %></h1>
+
+<div>
+<a href="/process_roll?dice=<%= @nod %>&sides=<%= @sides %>">Roll again</a> | 
+<a href="/">Go back home</a>
+</div>
+
+<ol>
+  <% @rolls.each do |a_roll| %>
+    <li>
+       <i>Result: </i> <b><%= a_roll %></b>
+    </li>
+  <% end %>
+</ol>
